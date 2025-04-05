@@ -5,7 +5,7 @@ interface CampoTextoProps {
     children: React.ReactNode | string;
     placeholder?: string;
     tipo?: 'email' | 'text' | 'password';
-    onChange?: React.ChangeEventHandler<HTMLInputElement>;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     value?: string;
 }
 

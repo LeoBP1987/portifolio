@@ -5,7 +5,7 @@ interface BotaoAdminProps {
     cor: string;
     corFonte: string;
     tipo: 'submit' | 'reset' | 'button';
-    onClick?: () => void;
+    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const BotaoEstilizado = styled.button<{$cor: string, $corFonte: string}>`
