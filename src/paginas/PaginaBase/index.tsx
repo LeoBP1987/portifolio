@@ -131,15 +131,15 @@ const PaginaBase = () => {
       <Carregando />
       <PortfolioContainer>
           <EstilosGlobais />
-          <FormLoginEstilizado $display={display} onSubmit={(e) => aoLogar(e)}>
+          <FormLoginEstilizado $display={display} onSubmit={(e: React.FormEvent) => aoLogar(e)}>
               <p onClick={() => aoFecharForm()}>X</p>
               <ContainerCampoEstilizado>
                   <LabelEstilizado htmlFor="login">Login</LabelEstilizado>
-                  <CampoTextoEstilizado value={usuario} onChange={(e) => setUsuario(e.target.value)} type="text" id="login" />
+                  <CampoTextoEstilizado value={usuario} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUsuario(e.target.value)} type="text" id="login" />
               </ContainerCampoEstilizado>
               <ContainerCampoEstilizado>
                   <LabelEstilizado htmlFor="senha">Senha</LabelEstilizado>
-                  <CampoTextoEstilizado value={senha} onChange={(e) => setSenha(e.target.value)} type="password" id="senha" />
+                  <CampoTextoEstilizado value={senha} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSenha(e.target.value)} type="password" id="senha" />
               </ContainerCampoEstilizado>
               <BotaoEstilizado type="submit">Entrar</BotaoEstilizado>
               {error && <p style={{ color: "red" }}>{error}</p>}
