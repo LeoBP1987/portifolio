@@ -326,17 +326,17 @@ const Tecnologias = () => {
                     )}
                 </tbody>
             </TableEstilizado>
-            <FormAddTecnologia $display={addTecnologia} onSubmit={(e) => aoSalvarTecnologia(e)}>
+            <FormAddTecnologia $display={addTecnologia} onSubmit={(e: React.FormEvent<HTMLFormElement>) => aoSalvarTecnologia(e)}>
                 <p onClick={() => aoFecharForm()}>X</p>
                 <ContainerCampoEstilizado>
                     <LabelEstilizado>Nome:</LabelEstilizado>
-                    <CampoTextoEstilizado value={nomeTecnologia} onChange={(e) => setNomeTecnologia(e.target.value)} type="text" />
+                    <CampoTextoEstilizado value={nomeTecnologia} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNomeTecnologia(e.target.value)} type="text" />
                 </ContainerCampoEstilizado>
 
                 <ContainerCampoEstilizado>
                     <LabelEstilizado>Tipo:</LabelEstilizado>
                     <ContainerListaTipos>
-                        <CampoTextoEstilizado value={tipoTecnologia} onChange={(e) => setTipoTecnologia(e.target.value)} type="text" />
+                        <CampoTextoEstilizado value={tipoTecnologia} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setTipoTecnologia(e.target.value)} type="text" />
                         <ImgFormTecnologia src={icone_adicao_azul} alt="Icone de adição" onClick={() => aoAddTecnologia()} />
                     </ContainerListaTipos>
                 </ContainerCampoEstilizado>
@@ -347,13 +347,13 @@ const Tecnologias = () => {
                 </ListaTipos>
                 <ContainerCampoEstilizado $tipo="file">
                     <LabelEstilizado>Icone Original:</LabelEstilizado>
-                    <CampoFileEstilizado onChange={(e) => aoCarregarIconeOriginal(e)} type="file" />
+                    <CampoFileEstilizado onChange={(e: React.ChangeEvent<HTMLInputElement>) => aoCarregarIconeOriginal(e)} type="file" />
                 </ContainerCampoEstilizado>
                 <H4Estilizado>{nomeIconeOriginal}</H4Estilizado>
 
                 <ContainerCampoEstilizado $tipo="file">
                     <LabelEstilizado>Icone Estilizado:</LabelEstilizado>
-                    <CampoFileEstilizado onChange={(e) => aoCarregarIconeEstilizado(e)} type="file" />
+                    <CampoFileEstilizado onChange={(e: React.ChangeEvent<HTMLInputElement>) => aoCarregarIconeEstilizado(e)} type="file" />
                 </ContainerCampoEstilizado>
                 <H4Estilizado>{nomeIconeEstilizado}</H4Estilizado>
                                 

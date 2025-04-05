@@ -211,7 +211,7 @@ const EditarPessoal = () => {
     };
 
     return (
-        <FormEstilizado onSubmit={(e) => aoAtualizarUsuario(e)}>
+        <FormEstilizado onSubmit={(e: React.FormEvent<HTMLFormElement>) => aoAtualizarUsuario(e)}>
             <ContainerCamposTexto>
                 <CampoTextoAdmin readOnly={false} value={nomeCompleto} onChange={(e) => setNomeCompleto(e.target.value)} >Nome Completo</CampoTextoAdmin>
                 <CampoTextoAdmin readOnly={false} value={login} onChange={(e) => setLogin(e.target.value)} >Login</CampoTextoAdmin>
@@ -224,7 +224,7 @@ const EditarPessoal = () => {
                     <ImgAdicaoEstilizado $display={addParagrafo} onClick={() => aoChamarAddParagrafo('none')} src={icone_menos} alt="Adicionar Parágrafo" />
                     <ImgAdicaoEstilizado $display={addParagrafo} onClick={() => aoAdicionarParagrafo(novoParagrafo)} src={icone_adicao_azul} alt="Adicionar Parágrafo" />
                 </ContainerSobreMim>
-                <AdicionarTextAreaEstilizado value={novoParagrafo} onChange={(e) => setNovoParagrafo(e.target.value)} $display={addParagrafo} placeholder="Adicione um novo parágrafo para o sobre mim..." />
+                <AdicionarTextAreaEstilizado value={novoParagrafo} onChange={(e: any) => setNovoParagrafo(e.target.value)} $display={addParagrafo} placeholder="Adicione um novo parágrafo para o sobre mim..." />
                 {sobreMim.map((paragrafo: string, index: number) => {
                     const texto = typeof paragrafo === 'string' ? paragrafo : JSON.stringify(paragrafo);
                     
@@ -232,7 +232,7 @@ const EditarPessoal = () => {
                         <TextAreaAdmin
                         key={index}
                         value={texto}
-                        onChange={(e) => {
+                        onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
                             const novosParagrafos = [...sobreMim];
                             novosParagrafos[index] = e.target.value;
                             setSobreMim(novosParagrafos);

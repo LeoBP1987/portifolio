@@ -73,10 +73,10 @@ const FormularioContato = () => {
     
 
     return (
-        <FormularioEstilizado onSubmit={(e) => aoEnviarEmail(e)}>
+        <FormularioEstilizado onSubmit={(e: React.FormEvent<HTMLFormElement>) => aoEnviarEmail(e)}>
             <CampoTexto value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Digite seu nome aqui">Nome</CampoTexto>
             <CampoTexto value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Digite seu email aqui">Email</CampoTexto>
-            <TextArea value={mensagem} onChange={(e) => setMensagem(e.target.value)} placeholder="Digite sua mensagem aqui">Mensagem</TextArea>
+            <TextArea value={mensagem} onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setMensagem(e.target.value)} placeholder="Digite sua mensagem aqui">Mensagem</TextArea>
             <ContainerBotao>
                 <BotaoEstilizado type="submit">ENVIAR</BotaoEstilizado>
             </ContainerBotao>

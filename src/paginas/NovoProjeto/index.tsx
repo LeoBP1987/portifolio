@@ -179,7 +179,7 @@ const NovoProjeto = () => {
     }
 
     return (
-        <FormNovoProjeto onSubmit={(e) => aoSalvarProjeto(e)}>
+        <FormNovoProjeto onSubmit={(e: React.FormEvent<HTMLFormElement>) => aoSalvarProjeto(e)}>
             <CampoTextoAdmin value={nomeProjeto} onChange={(e) => setNomeProjeto(e.target.value)}>Nome do Projeto</CampoTextoAdmin>
             <CampoTextoAdmin value={ordem} onChange={(e) => setOrdem(e.target.value)}>Ordem</CampoTextoAdmin>
             <CampoTextoAdmin onChange={(e) => setImagemCapa(e.target.files ? e.target.files[0] : null)} tipo="file" accept="/image">Imagem de Capa</CampoTextoAdmin>
@@ -193,7 +193,7 @@ const NovoProjeto = () => {
             <TextAreaAdmin value={descricaoFrontEnd} onChange={(e) => setDescricaoFrontEnd(e.target.value)}>Descrição FrontEnd</TextAreaAdmin>
             <ContainerStacks>
                 <LabelStack>Stacks</LabelStack>
-                <InputStack value={stack} onChange={(e) => setStack(e.target.value)} />
+                <InputStack value={stack} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setStack(e.target.value)} />
                 <ImgStack src={iconeAdicao} alt="Adicionar Stack" onClick={() => aoAdicionarStack()} />
             </ContainerStacks>
             <ListaStacks>

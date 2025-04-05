@@ -4,7 +4,7 @@ import styled from "styled-components";
 interface TextAreaProps {
     children: React.ReactNode | string;
     placeholder?: string;
-    onChange?: (e: React.ChangeEventHandler<HTMLTextAreaElement>) => void;
+    onChange?: (e:  React.ChangeEvent<HTMLTextAreaElement>) => void;
     value?: string;
 }
 
