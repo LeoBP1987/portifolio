@@ -1,21 +1,18 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "vite.config.ts",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "dist",
-          "environment": {
-            "NPM_FLAGS": "--legacy-peer-deps"
-          }
-        }
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
       }
-    ],
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/index.html"
-      }
-    ]
-  }
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
