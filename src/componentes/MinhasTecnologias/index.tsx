@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useGetTecnologias } from "../../hooks/useGetTecnologias";
 import { ITecnologia } from "../../compartilhado/interface/ITecnologia";
 
-
 interface TecnologiasProps {
     id: string;
 }
@@ -140,19 +139,26 @@ const MinhasTecnologias = ({id}: TecnologiasProps) => {
     const [listaSelecionada, setListaSelecionada] = useState<ITecnologia[]>(listaBackEnd);
 
     useEffect(() => {
-        const backEnd = tecnologias.filter(tecnologia => tecnologia.tipo[0].includes("backend"));
-        setListaBackEnd(backEnd);
 
-        const frontEnd = tecnologias.filter(tecnologia => tecnologia.tipo[0].includes("frontend"));
-        setListaFrontEnd(frontEnd);
+        const carregaLista = () => {
+            const backEnd = tecnologias.filter(tecnologia => tecnologia.tipo[0].includes("backend"));
+            setListaBackEnd(backEnd);
+
+            const frontEnd = tecnologias.filter(tecnologia => tecnologia.tipo[0].includes("frontend"));
+            setListaFrontEnd(frontEnd);
+            
+            const devOps = tecnologias.filter(tecnologia => tecnologia.tipo[0].includes("devops"));
+            setListaDevOps(devOps);
+
+            const ferramentas = tecnologias.filter(tecnologia => tecnologia.tipo[0].includes("ferramentas"));
+            setListaFerramentas(ferramentas);
+
+            setListaSelecionada(listaBackEnd);
+        }
         
-        const devOps = tecnologias.filter(tecnologia => tecnologia.tipo[0].includes("devops"));
-        setListaDevOps(devOps);
-
-        const ferramentas = tecnologias.filter(tecnologia => tecnologia.tipo[0].includes("ferramentas"));
-        setListaFerramentas(ferramentas);
-
-        setListaSelecionada(listaBackEnd);
+        if(listaSelecionada.length === 0) {
+            carregaLista();
+        }
 
     } , [tecnologias]);
 
@@ -193,6 +199,6 @@ const MinhasTecnologias = ({id}: TecnologiasProps) => {
             </ContainerConteudo>
         </SectionTecnologias>
     );
-}
+};
 
 export default MinhasTecnologias;

@@ -19,9 +19,8 @@ export const useGetTecnologias = () => {
             }
         };
 
-        if (tecnologias.length === 0) {
-            getTecnologiasData();
-        }
+        getTecnologiasData();
+        
     }, [tecnologias]);
 
     return { tecnologias, loading, setTecnologias };
