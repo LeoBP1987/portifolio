@@ -1,13 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
+
 export default defineConfig({
-  plugins: [react()],
-  esbuild: {
-    jsxInject: `import React from 'react'`
-  },
+  plugins: [
+    react({
+          })
+  ],
   build: {
-    target: 'esnext'
+    target: 'es2020'
   }
 })
