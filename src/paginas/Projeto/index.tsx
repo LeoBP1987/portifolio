@@ -180,8 +180,8 @@ const ItemStack = styled.div`
         transform: translateY(-5px);
     }
     @media screen and (max-width: 800px) {
-        font-size: 0.5rem;
-        padding: 5px 10px;
+        font-size: 0.65rem;
+        padding: 7.5px 15px;
     }
 `
 
@@ -223,10 +223,10 @@ const ItemLink = styled(Link)`
         transform: translateY(-5px);
     }
     @media screen and (max-width: 800px) {
-        width: 120px;
+        width: 100px;
         img {
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
         }
         p {
             font-size: 0.8rem;
@@ -262,10 +262,10 @@ const ItemLinkVoltar = styled(Link)`
         transform: translateY(-5px);
     }
     @media screen and (max-width: 800px) {
-        width: 120px;
+        width: 100px;
         img {
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
         }
         p {
             font-size: 0.8rem;
