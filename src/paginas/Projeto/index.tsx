@@ -190,6 +190,8 @@ const ListaLinks = styled.div`
     display: flex;
     gap: 30px;
     @media screen and (max-width: 800px) {
+        align-items: center;
+        justify-content: center;
         margin-bottom: 60px;
         gap: 15px;
     }
@@ -223,7 +225,8 @@ const ItemLink = styled(Link)`
         transform: translateY(-5px);
     }
     @media screen and (max-width: 800px) {
-        width: 110px;
+        width: 100px;
+        height: 40px;
         img {
             width: 25px;
             height: 25px;
@@ -262,7 +265,8 @@ const ItemLinkVoltar = styled(Link)`
         transform: translateY(-5px);
     }
     @media screen and (max-width: 800px) {
-        width: 110px;
+        width: 100px;
+        height: 40px;
         img {
             width: 25px;
             height: 25px;
