@@ -30,7 +30,7 @@ const NavEstilizado = styled.nav<{ $displayMobile: string }>`
         width: 50%;
         position: absolute;
         top: 20px;
-        left: 140px;
+        left: 130px;
         background: var(--cor-primaria);
         flex-direction: column;
         align-items: center;
@@ -84,7 +84,7 @@ const ImgPilhaEstilizado = styled.img`
     margin: 20px;
     padding: 0;
     position: absolute;
-    left: 280px;
+    left: 300px;
     top: 0;
     z-index: 1000;
     display: flex;
