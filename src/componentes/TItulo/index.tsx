@@ -26,6 +26,9 @@ const TituloEstilizado = styled.h2`
     color: var(--cor-fonte-secundaria);
     font-size: 1.8rem;
     font-weight: 900;
+    @media screen and (max-width: 800px) {
+        font-size: 1.5rem;
+    }
 `
 
 const SpanEstilizado = styled.span<{ $span?: string }>`

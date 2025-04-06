@@ -30,6 +30,11 @@ const ContainerConteudo = styled.div`
     gap: 80px;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 800px) {
+        margin: 0;
+        flex-direction: column;
+        gap: 40px;
+    }
 `
 
 const ContainerBotoes = styled.div`
@@ -39,6 +44,11 @@ const ContainerBotoes = styled.div`
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
+    @media screen and (max-width: 800px) {
+        width: 300px;
+        gap: 20px;
+        justify-content: center;
+    }
 `
 
 const animacaoFlair = keyframes`
@@ -81,6 +91,13 @@ const BotaoEstilizado = styled.button<{ $ativo: boolean }>`
         transition: transform 0.2s ease, box-shadow 0.2s ease;
         box-shadow: 0 0 20px var(--cor-secundaria);
     `}
+    @media screen and (max-width: 800px) {
+        margin: 0;
+        padding: 10px 20px;
+        width: 120px;
+        height: 40px;
+        font-size: 0.6rem;
+    }
 `
 
 const ListaTecnologias = styled.div`
@@ -92,6 +109,11 @@ const ListaTecnologias = styled.div`
     align-items: center;
     padding: 0;
     margin: 0;
+    @media screen and (max-width: 800px) {
+        width: 300px;
+        gap: 5px;
+        justify-content: center;
+    }
 `
 
 const ItemTecnologia = styled.div`
@@ -125,6 +147,18 @@ const ItemTecnologia = styled.div`
         background-size: 400% 400%;
         animation: ${animacaoFlair} 6s ease infinite;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    @media screen and (max-width: 800px) {
+        justify-content: center;
+        width: 80px;
+        height: 50px;
+        img {
+            width: 30px;
+            height: 30px;
+        }
+        p {
+            font-size: 0.5rem;
+        }
     }
 `
 
