@@ -20,6 +20,10 @@ const ParagrafoEstilizado = styled.p`
     font-weight: 700;
     align-self: center;
     justify-self: center;
+    @media screen and (max-width: 800px) {
+        font-size: 0.8rem;
+    }
+
 `
 
 
