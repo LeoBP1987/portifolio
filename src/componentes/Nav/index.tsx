@@ -84,7 +84,7 @@ const ImgPilhaEstilizado = styled.img`
     margin: 20px;
     padding: 0;
     position: absolute;
-    left: 300px;
+    left: 100px;
     top: 0;
     z-index: 1000;
     display: flex;
