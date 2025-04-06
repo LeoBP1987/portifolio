@@ -162,6 +162,7 @@ const ContainerStacks = styled.div`
     flex-wrap: wrap;
     gap: 20px;
     @media screen and (max-width: 800px) {
+        margin-bottom: 40px;
         gap: 15px;
     }
 `
@@ -189,7 +190,7 @@ const ListaLinks = styled.div`
     display: flex;
     gap: 30px;
     @media screen and (max-width: 800px) {
-        margin-bottom: 80px;
+        margin-bottom: 60px;
         gap: 15px;
     }
 `
