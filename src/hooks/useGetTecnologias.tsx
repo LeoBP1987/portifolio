@@ -23,5 +23,5 @@ export const useGetTecnologias = () => {
         
     }, [tecnologias]);
 
-    return { tecnologias, loading, setTecnologias };
+    return { tecnologias, loading };
 };

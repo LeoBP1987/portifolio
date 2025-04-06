@@ -3,6 +3,8 @@ import Titulo from "../TItulo";
 import { useEffect, useState } from "react";
 import { useGetTecnologias } from "../../hooks/useGetTecnologias";
 import { ITecnologia } from "../../compartilhado/interface/ITecnologia";
+import { useNavigate } from "react-router-dom";
+import { useTecnologias } from "../../context/TecnologiasContext.js";
 
 interface TecnologiasProps {
     id: string;
@@ -72,7 +74,7 @@ const BotaoEstilizado = styled.button<{ $ativo: boolean }>`
         transition: transform 0.2s ease, box-shadow 0.2s ease;
         box-shadow: 0 0 20px var(--cor-secundaria);
     }
-    ${props => props.$ativo && css`
+    ${(props: { $ativo: boolean }) => props.$ativo && css`
         background: linear-gradient(45deg, #000D26, #000D26, #000D26, #EEE8AA, #000D26, #000D26, #000D26);
         background-size: 400% 400%;
         animation: ${animacaoFlair} 6s ease infinite;
@@ -128,7 +130,7 @@ const ItemTecnologia = styled.div`
 
 const MinhasTecnologias = ({id}: TecnologiasProps) => {
 
-    const {tecnologias} = useGetTecnologias();
+    const {tecnologias } = useGetTecnologias();
 
     const [listaBackEnd, setListaBackEnd] = useState<ITecnologia[]>([]);
     const [listaFrontEnd, setListaFrontEnd] = useState<ITecnologia[]>([]);
@@ -141,16 +143,16 @@ const MinhasTecnologias = ({id}: TecnologiasProps) => {
     useEffect(() => {
 
         const carregaLista = () => {
-            const backEnd = tecnologias.filter(tecnologia => tecnologia.tipo[0].includes("backend"));
+            const backEnd = tecnologias.filter((tecnologia: ITecnologia) => tecnologia.tipo[0].includes("backend"));
             setListaBackEnd(backEnd);
 
-            const frontEnd = tecnologias.filter(tecnologia => tecnologia.tipo[0].includes("frontend"));
+            const frontEnd = tecnologias.filter((tecnologia: ITecnologia) => tecnologia.tipo[0].includes("frontend"));
             setListaFrontEnd(frontEnd);
             
-            const devOps = tecnologias.filter(tecnologia => tecnologia.tipo[0].includes("devops"));
+            const devOps = tecnologias.filter((tecnologia: ITecnologia) => tecnologia.tipo[0].includes("devops"));
             setListaDevOps(devOps);
 
-            const ferramentas = tecnologias.filter(tecnologia => tecnologia.tipo[0].includes("ferramentas"));
+            const ferramentas = tecnologias.filter((tecnologia: ITecnologia) => tecnologia.tipo[0].includes("ferramentas"));
             setListaFerramentas(ferramentas);
 
             setListaSelecionada(listaBackEnd);

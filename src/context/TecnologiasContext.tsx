@@ -7,6 +7,8 @@ interface TecnologiasContextType {
     setTecnologias: React.Dispatch<React.SetStateAction<ITecnologia[] | []>>;
     loading: boolean;
     setLoading: (loading: boolean) => void;
+    carregaTecnologia: boolean;
+    setCarregaTecnologia: (loading: boolean) => void;
 }
 
 export const TecnologiasContext = createContext<TecnologiasContextType | undefined>(undefined);
@@ -18,12 +20,15 @@ interface TecnologiasProviderProps {
 export const TecnologiasProvider = ({ children }: TecnologiasProviderProps) => {
     const [tecnologias, setTecnologias] = useState<ITecnologia[] | []>([]);
     const [loading, setLoading] = useState(false);
+    const [carregaTecnologia, setCarregaTecnologia] = useState(true);
 
     const contextValue = useMemo(() => ({
         tecnologias,
         setTecnologias,
         loading,
         setLoading,
+        carregaTecnologia,
+        setCarregaTecnologia,
     }), [tecnologias, loading]);
 
     return (

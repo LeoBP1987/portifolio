@@ -208,7 +208,7 @@ const BotaoEstilizado = styled.button`
 
 const Tecnologias = () => {
 
-    const { tecnologias, loading } = useGetTecnologias();
+    const { tecnologias } = useGetTecnologias();
     const { setDisplay } = useCarregando();
 
     const [addTecnologia, setAddTecnologia] = useState<'none' | 'flex'>('none');
@@ -219,14 +219,6 @@ const Tecnologias = () => {
     const [nomeIconeOriginal, setNomeIconeOriginal] = useState<string>('');
     const [iconeEstilizado, setIconeEstilizado] = useState<File | null>(null);
     const [nomeIconeEstilizado, setNomeIconeEstilizado] = useState<string>('');
-
-    useEffect(() => {
-                if (loading) {
-                    setDisplay('flex');
-                } else {
-                    setDisplay('none');
-                }
-            }, [loading]);
 
     const aoFecharForm = () => {
         setNomeTecnologia('');
