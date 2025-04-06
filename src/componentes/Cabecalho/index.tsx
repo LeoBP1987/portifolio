@@ -53,8 +53,8 @@ const ParagrafoEstilizado = styled.p`
     text-align: justify;
     line-height: 1.1rem;
     @media screen and (max-width: 800px) {
-        width: 60%;
-        font-size: 0.65rem;
+        width: 65%;
+        font-size: 0.7rem;
     }
 `
 
