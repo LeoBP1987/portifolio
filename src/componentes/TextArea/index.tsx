@@ -22,6 +22,9 @@ const LabelEstilizado = styled.label`
     color: var(--cor-fonte-secundaria);
     font-size: 0.8rem;
     font-weight: 700;
+    @media screen and (max-width: 800px) {
+        font-size: 0.7rem;
+    }
 `
 
 const TextAreaEstilizado = styled.textarea`
@@ -37,6 +40,11 @@ const TextAreaEstilizado = styled.textarea`
     font-weight: 500;
     outline: none;
     transition: 0.3s;
+    @media screen and (max-width: 800px) {
+        width: 90%;
+        height: 150px;
+        font-size: 0.7rem;
+    }
 `
 
 

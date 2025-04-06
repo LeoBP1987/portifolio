@@ -21,6 +21,11 @@ const FormularioEstilizado = styled.form`
     background: #FFF;
     color: var(--cor-fonte-secundaria);
     box-shadow: 1px 1px 5px rgba(0, 13, 38, 0.08);
+    @media screen and (max-width: 800px) {
+        width: 80%;
+        height: 100%;
+        padding: 30px 20px;
+    }
 `
 
 const ContainerBotao = styled.div`
@@ -45,6 +50,12 @@ const BotaoEstilizado = styled.button`
     box-shadow: 1px 1px 5px var(--cor-primaria);
     &:hover {
         transform: translateY(-5px);
+    }
+    @media screen and (max-width: 800px) {
+        margin: 0;
+        width: 140px;
+        height: 40px;
+        padding: 10px 20px;
     }
 `
 

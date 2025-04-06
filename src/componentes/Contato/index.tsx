@@ -69,6 +69,12 @@ const LinkEstilizado = styled(Link)`
     &:hover {
         transform: translateY(-5px);
     }
+    @media screen and (max-width: 800px) {
+        width: 140px;
+        height: 40px;
+        padding: 10px 20px;
+        gap: 10px;  
+      }
 `
 
 const AEstilizado = styled.a`
