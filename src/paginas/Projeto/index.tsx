@@ -225,14 +225,14 @@ const ItemLink = styled(Link)`
         transform: translateY(-5px);
     }
     @media screen and (max-width: 800px) {
-        width: 100px;
+        width: 105px;
         height: 40px;
         img {
-            width: 25px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
         }
         p {
-            font-size: 0.8rem;
+            font-size: 0.65rem;
         }
     }
 `
@@ -265,14 +265,14 @@ const ItemLinkVoltar = styled(Link)`
         transform: translateY(-5px);
     }
     @media screen and (max-width: 800px) {
-        width: 100px;
+        width: 105px;
         height: 40px;
         img {
-            width: 25px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
         }
         p {
-            font-size: 0.8rem;
+            font-size: 0.65rem;
         }
     }
 `
