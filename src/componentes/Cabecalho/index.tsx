@@ -88,7 +88,7 @@ const LinkSobreMimEstilizado = styled(Link)`
     @media screen and (max-width: 800px) {
         font-size: 0.7rem;
         padding: 10px 20px;
-        margin-bottom: 25px;
+        margin-bottom: 80px;
     }
 `
 
