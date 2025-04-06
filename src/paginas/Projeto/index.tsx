@@ -223,7 +223,7 @@ const ItemLink = styled(Link)`
         transform: translateY(-5px);
     }
     @media screen and (max-width: 800px) {
-        width: 100px;
+        width: 110px;
         img {
             width: 25px;
             height: 25px;
@@ -262,7 +262,7 @@ const ItemLinkVoltar = styled(Link)`
         transform: translateY(-5px);
     }
     @media screen and (max-width: 800px) {
-        width: 100px;
+        width: 110px;
         img {
             width: 25px;
             height: 25px;
