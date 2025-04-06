@@ -28,6 +28,9 @@ const ASubirEstilizado = styled.a`
   &:hover img {
     transform: scale(1.1);
   }
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 const Home = () => {
