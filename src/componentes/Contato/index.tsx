@@ -70,7 +70,7 @@ const LinkEstilizado = styled(Link)`
         transform: translateY(-5px);
     }
     @media screen and (max-width: 800px) {
-        width: 140px;
+        width: 120px;
         height: 40px;
         padding: 10px 20px;
         gap: 10px;  
