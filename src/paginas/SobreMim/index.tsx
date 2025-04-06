@@ -27,6 +27,7 @@ const ImgSobreMim = styled.img`
     width: 450px;
     height: 300px;
     filter: grayscale(100%);
+
 `
 
 const ContainerTexto = styled.div`

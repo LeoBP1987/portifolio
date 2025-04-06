@@ -19,6 +19,9 @@ const BackgroundTecnologias = styled.div`
     width: 100%;
     height: 200px;
     text-align: center;
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
 `;
 
 const ContainerTecnologias = styled.div`

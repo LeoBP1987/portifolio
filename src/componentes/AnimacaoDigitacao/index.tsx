@@ -8,6 +8,9 @@ const Container = styled.div`
   font-size: 2.5rem;
   font-weight: 900;
   font-family: Arial, Helvetica, sans-serif;
+  @media screen and (max-width: 800px) {
+    font-size: 2rem;
+  }
 `;
 
 const Text = styled.span`
