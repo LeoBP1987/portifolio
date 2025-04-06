@@ -35,6 +35,9 @@ const TituloEstilizado = styled.h1`
     font-family: var(--fonte-secundaria);
     letter-spacing: 3px;
     -webkit-text-stroke: 1px #D35400;
+    @media screen and (max-width: 800px) {
+        font-size: 2.5rem;
+    }
 `
 
 const ParagrafoEstilizado = styled.p`
@@ -46,6 +49,11 @@ const ParagrafoEstilizado = styled.p`
     overflow-wrap: break-word;
     font-family: var(--fonte-secundaria);
     letter-spacing: 3px;
+    @media screen and (max-width: 800px) {
+        max-width: 70%;
+        font-size: 0.8rem;
+        letter-spacing: 2.5px;
+    }
 `
 
 const LinkDeployEstilizado = styled(Link)`
@@ -62,6 +70,11 @@ const LinkDeployEstilizado = styled(Link)`
     box-shadow: 1px 1px 5px ragba(0, 0, 0, 0.75);
     &:hover {
         box-shadow: 1px 1px 10px var(--cor-secundaria);
+    }
+    @media screen and (max-width: 800px) {
+        width: 100px;
+        font-size: 0.7rem;
+        padding: 10px 20px;
     }
 `
 
@@ -81,6 +94,10 @@ const IframeEstilizado = styled.iframe`
     height: 451px;
     border-radius: 8px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+    @media screen and (max-width: 800px) {
+        width: 90%;
+        height: 300px;
+    }
 `
 
 const ImgDemonstracao = styled.img`
@@ -89,6 +106,10 @@ const ImgDemonstracao = styled.img`
     height: 451px;
     border-radius: 8px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75);
+    @media screen and (max-width: 800px) {
+        width: 90%;
+        height: 300px;
+    }
 `
 
 const ContainerTextoProjeto = styled.div`
@@ -98,6 +119,10 @@ const ContainerTextoProjeto = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    @media screen and (max-width: 800px) {
+        margin: 0;
+        width: 90%;
+    }
 `
 
 const SubTituloEstilizado = styled.h2`
@@ -108,6 +133,9 @@ const SubTituloEstilizado = styled.h2`
     letter-spacing: 1px;
     strong {
         color: var(--cor-secundaria);
+    }
+    @media screen and (max-width: 800px) {
+        font-size: 1.2rem;
     }
 `
 
@@ -122,6 +150,10 @@ const TexteProjetoEstilizado = styled.div`
     font-family: var(--fonte-secundaria);
     letter-spacing: 1px;
     line-height: 1.2;
+    @media screen and (max-width: 800px) {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
 `
 
 const ContainerStacks = styled.div`
@@ -129,6 +161,9 @@ const ContainerStacks = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    @media screen and (max-width: 800px) {
+        gap: 15px;
+    }
 `
 
 const ItemStack = styled.div`
@@ -143,12 +178,20 @@ const ItemStack = styled.div`
     &:hover {
         transform: translateY(-5px);
     }
+    @media screen and (max-width: 800px) {
+        font-size: 0.5rem;
+        padding: 5px 10px;
+    }
 `
 
 const ListaLinks = styled.div`
     margin: 20px 0 0 0;
     display: flex;
     gap: 30px;
+    @media screen and (max-width: 800px) {
+        margin-bottom: 80px;
+        gap: 15px;
+    }
 `
 
 const ItemLink = styled(Link)`
@@ -177,6 +220,16 @@ const ItemLink = styled(Link)`
     }
     &:hover {
         transform: translateY(-5px);
+    }
+    @media screen and (max-width: 800px) {
+        width: 120px;
+        img {
+            width: 30px;
+            height: 30px;
+        }
+        p {
+            font-size: 0.8rem;
+        }
     }
 `
 
@@ -207,6 +260,16 @@ const ItemLinkVoltar = styled(Link)`
     &:hover {
         transform: translateY(-5px);
     }
+    @media screen and (max-width: 800px) {
+        width: 120px;
+        img {
+            width: 30px;
+            height: 30px;
+        }
+        p {
+            font-size: 0.8rem;
+        }
+    }
 `
 
 const ASubirEstilizado = styled.a`
@@ -223,6 +286,9 @@ const ASubirEstilizado = styled.a`
   }
   &:hover img {
     transform: scale(1.1);
+  }
+  @media screen and (max-width: 800px) {
+    display: none;
   }
 `;
 
