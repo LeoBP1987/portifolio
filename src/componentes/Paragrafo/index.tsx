@@ -8,7 +8,7 @@ interface ParagrafoProps {
 }
 
 const ParagrafoEstilizado = styled.p<{$tamanhoFonte?: string, $espacoParagrafo?: string}>`
-    margin: 0;
+    margin: 0 20px 0 0;
     padding: 0;
     max-width: ${props => props.$espacoParagrafo ? props.$espacoParagrafo : 'none'};
     color: var(--cor-fonte-terciaria);
@@ -16,8 +16,12 @@ const ParagrafoEstilizado = styled.p<{$tamanhoFonte?: string, $espacoParagrafo?:
     font-weight: 500;
     font-style: italic;
     overflow-wrap: break-word;
-    text-align: start;
+    text-align: justify;
     line-height: 1.5;
+    @media screen and (max-width: 800px) {
+        
+    }
+
 `
 
 

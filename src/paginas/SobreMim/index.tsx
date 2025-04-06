@@ -27,7 +27,9 @@ const ImgSobreMim = styled.img`
     width: 450px;
     height: 300px;
     filter: grayscale(100%);
-
+    @media screen and (max-width: 800px) {
+        display: none;
+    }
 `
 
 const ContainerTexto = styled.div`
@@ -36,7 +38,12 @@ const ContainerTexto = styled.div`
     flex-direction: column;
     gap: 25px;
     align-items: justify-self;
+    @media screen and (max-width: 800px) {
+        margin: 40px 20px 40px 40px;
+        gap: 15px;
+    }
 `
+
 const StrongEstilizado = styled.strong`
     color: var(--cor-secundaria);
     font-weight: 900;
