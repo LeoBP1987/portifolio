@@ -111,6 +111,7 @@ const ListaTecnologias = styled.div`
     margin: 0;
     @media screen and (max-width: 800px) {
         width: 300px;
+        margin-bottom: 80px;
         gap: 5px;
         justify-content: center;
     }
