@@ -29,7 +29,7 @@ const NavEstilizado = styled.nav<{ $displayMobile: string }>`
         z-index: 1000;
         width: 50%;
         position: absolute;
-        top: 20px;
+        top: 50px;
         left: 130px;
         background: var(--cor-primaria);
         flex-direction: column;
