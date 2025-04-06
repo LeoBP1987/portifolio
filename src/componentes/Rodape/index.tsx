@@ -9,6 +9,7 @@ const ContainerRodapeEstilizado = styled.div`
     height: 20px;
     padding: 20px 0 20px 0;
     margin: 0;
+    text-align: center;
 `
 
 const ParagrafoEstilizado = styled.p`

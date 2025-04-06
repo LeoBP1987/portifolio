@@ -70,10 +70,17 @@ const LinkEstilizado = styled(Link)`
         transform: translateY(-5px);
     }
     @media screen and (max-width: 800px) {
-        width: 120px;
+        width: 100px;
         height: 40px;
         padding: 10px 20px;
-        gap: 10px;  
+        gap: 10px;
+        p {
+          font-size: 0.8rem;
+        }
+        img {
+          width: 30px;
+          height: 30px;
+        }  
       }
 `
 
