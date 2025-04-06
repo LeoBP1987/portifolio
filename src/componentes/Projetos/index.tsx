@@ -26,6 +26,10 @@ const ContainerListaProjetos = styled.div`
     margin: 10px 0 80px 0;
     padding: 0;
     z-index: 2;
+    @media screen and (max-width: 800px) {
+        gap: 40px;
+    }
+
 `
 
 const ContainerItemProjeto = styled.div`
@@ -36,6 +40,10 @@ const ContainerItemProjeto = styled.div`
     margin: 0;
     padding: 0;
     z-index: 2;
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+        gap: 40px;
+    }
 `
 
 const ImgProjetos = styled.img`
@@ -43,6 +51,10 @@ const ImgProjetos = styled.img`
     height: 400px;
     margin: 0;
     padding: 0;
+    @media screen and (max-width: 800px) {
+        width: 300px;
+        height: 200px;
+    }
 `
 
 const ContainerInfoProjeto = styled.div`
@@ -53,6 +65,11 @@ const ContainerInfoProjeto = styled.div`
     margin: 0 0 50px 0;
     padding: 0;
     align-items: flex-start;
+    @media screen and (max-width: 800px) {
+        width: 300px;
+        align-items: center;
+        gap: 10px;
+    }
 `
 const H3Estilizado = styled.h3`
     margin: 0;
@@ -61,6 +78,9 @@ const H3Estilizado = styled.h3`
     font-size: 1.5rem;
     font-weight: 900;
     letter-spacing: 1px;
+    @media screen and (max-width: 800px) {
+        font-size: 1.2rem;
+    }
 `
 
 const ParagrafoProjetoEstilizado = styled.p`
@@ -73,6 +93,10 @@ const ParagrafoProjetoEstilizado = styled.p`
     text-align: justify;
     line-height: 1.5;
     overflow-wrap: break-word;
+    @media screen and (max-width: 800px) {
+        font-size: 0.7rem;
+    }
+
 `
 
 const LinkConhecaProjeto = styled(Link)`
@@ -88,6 +112,11 @@ const LinkConhecaProjeto = styled(Link)`
     &:hover {
         box-shadow: 2px 2px 20px var(--cor-secundaria);
     }
+    @media screen and (max-width: 800px) {
+        font-size: 0.7rem;
+        padding: 10px 20px;
+    }
+
 `
 
 const Projetos = ({id}: ProjetosProps) => { 

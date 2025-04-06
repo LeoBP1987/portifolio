@@ -36,6 +36,9 @@ const SpanEstilizado = styled.span<{ $span?: string }>`
     height: 0.3em;
     background-color: var(--cor-secundaria);
     border-radius: 5px;
+    @media screen and (max-width: 800px) {
+        width: ${props => `${(parseInt(props.$span)*0.75)}em`};
+    }
 `
 
 const ParagrafoEstilizado = styled.p`
@@ -48,6 +51,9 @@ const ParagrafoEstilizado = styled.p`
     overflow-wrap: break-word;
     text-align: center;
     line-height: 1.5;
+    @media screen and (max-width: 800px) {
+        font-size: 0.8rem;
+    }
 `
 
 const Titulo = ({ children, texto, span, marginTop, align }: TituloProps) => {
