@@ -322,9 +322,7 @@ const Projeto = () => {
                 }
             } 
 
-            if (loadingStacks) {
-                carregaStacks();
-            }
+            carregaStacks();
 
     }, [projeto]);
       
