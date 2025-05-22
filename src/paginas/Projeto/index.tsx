@@ -373,18 +373,22 @@ const Projeto = () => {
                     <ReactMarkdown>{projeto?.descricaoLonga}</ReactMarkdown>
                 </TexteProjetoEstilizado>    
             </ContainerTextoProjeto>
-            <ContainerTextoProjeto id="backend">
-                <SubTituloEstilizado>Destaques do Back-End</SubTituloEstilizado>
-                <TexteProjetoEstilizado>
-                    <ReactMarkdown>{projeto?.descricaoBackEnd}</ReactMarkdown>
-                </TexteProjetoEstilizado>    
-            </ContainerTextoProjeto>
-            <ContainerTextoProjeto id="frontend">
-                <SubTituloEstilizado>Destaques do Front-End</SubTituloEstilizado>
-                <TexteProjetoEstilizado>
-                    <ReactMarkdown>{projeto?.descricaoFrontEnd}</ReactMarkdown>
-                </TexteProjetoEstilizado>   
-            </ContainerTextoProjeto>
+            {projeto?.descricaoBackEnd && 
+                <ContainerTextoProjeto id="backend">
+                    <SubTituloEstilizado>Destaques do Back-End</SubTituloEstilizado>
+                    <TexteProjetoEstilizado>
+                        <ReactMarkdown>{projeto?.descricaoBackEnd}</ReactMarkdown>
+                    </TexteProjetoEstilizado>    
+                </ContainerTextoProjeto>
+            }
+            {projeto?.descricaoFrontEnd &&
+                <ContainerTextoProjeto id="frontend">
+                    <SubTituloEstilizado>Destaques do Front-End</SubTituloEstilizado>
+                    <TexteProjetoEstilizado>
+                        <ReactMarkdown>{projeto?.descricaoFrontEnd}</ReactMarkdown>
+                    </TexteProjetoEstilizado>   
+                </ContainerTextoProjeto>
+            }
             <ContainerTextoProjeto id="stacks">
                 <SubTituloEstilizado>Stacks Utilizadas</SubTituloEstilizado>
                 <ContainerStacks>
