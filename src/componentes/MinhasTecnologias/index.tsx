@@ -104,7 +104,7 @@ const ListaTecnologias = styled.div`
     width: 600px;
     display: flex;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 5px;
     justify-content: flex-start;
     align-items: center;
     padding: 0;
@@ -119,14 +119,14 @@ const ListaTecnologias = styled.div`
 
 const ItemTecnologia = styled.div`
     margin: 0;
-    padding: 20px;
+    padding: 15px;
     width: 130px;
     height: 81.25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: 5px;
     background: var(--cor-primaria);
     img {
         margin: 0;
