@@ -67,8 +67,8 @@ const ImgFotoEstilizado = styled.img`
     border: 5px solid var(--cor-fonte-primaria);
     box-shadow: 0 0 10px #000000;
     @media screen and (max-width: 800px) {
-        width: 250px;
-        height: 250px;
+        width: 100%;
+        height: 100%;
     }
 `
 
